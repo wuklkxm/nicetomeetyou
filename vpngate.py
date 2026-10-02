@@ -457,14 +457,15 @@ def build_chains_text(data):
 
 # edgetunnel 入口地址池: 客户端直连 Cloudflare 的优选 IP:端口 (循环分配给每个国家节点当入口)
 # 可通过环境变量 EDGE_HOSTS 覆盖 (逗号分隔)
+# edgetunnel 入口地址：客户真实走 Cloudflare 的优选 IP:端口（请分别给每个国家节点当入口）
 EDGE_HOSTS = [
-    h.strip()
-    for h in os.environ.get(
-        "EDGE_HOSTS",
-        "www.udacity.com:443,hzytjy.cn:443,ali.nonull.pp.ua:443,auto.dolby.dpdns.org:443,"
-        "cdn.cnno.de:443,saas.sin.fan:443,cf.777791.xyz:443",
-    ).split(",")
-    if h.strip()
+    "www.udacity.com:443",
+    "hzytjy.cn:443",
+    "ali.nonull.pp.ua:443",
+    "auto.dolby.dpdns.org:443",
+    "cdn.cmo.de:443",
+    "saas.sin.fan:443",
+    "cf.777791.xyz:443"
 ]
 
 HOSTS_URL = os.environ.get("HOSTS_URL", "https://jerylihub.github.io/gate/hosts.txt")
