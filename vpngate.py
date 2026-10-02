@@ -52,9 +52,7 @@ VPNGATE_MIRROR = os.environ.get(
 )
 # 已部署的 Cloudflare Worker 检测接口 (GET /check?proxyip=host:port, 实测确认)
 WORKER_CHECK_URI = os.environ.get(
-    "CHECK_WORKER",
-    "https://nicetomeet.seefarter.de5.net/check?sstp=v"
-)
+    "CHECK_WORKER", "https://nicetomeet.seefarter.de5.net/check?sstp=v")
 CHECK_TIMEOUT = float(os.environ.get("CHECK_TIMEOUT", "90"))          # 单请求客户端超时 (秒)
 MAX_CHECK_NODES = int(os.environ.get("MAX_CHECK_NODES", "0"))         # 0=不限; 本地测试可设小值
 HTTP_TIMEOUT = int(os.environ.get("HTTP_TIMEOUT", "60"))              # 拉取数据源超时
