@@ -461,8 +461,9 @@ EDGE_HOSTS = [
     "auto.dolby.dpdns.org:443",
     "cdn.cmo.de:443",
     "saas.sin.fan:443",
-    "cf.777791.xyz:443"
+    "cf.777791.xyz:443",
 ]
+
 
 
   HOSTS_URL = os.environ.get("HOSTS_URL", "https://jerylihub.github.io/gate/hosts.txt")
