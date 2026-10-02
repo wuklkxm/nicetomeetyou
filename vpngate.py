@@ -460,7 +460,6 @@ EDGE_HOSTS = [
     "ali.nonull.pp.ua:443",
     "auto.dolby.dpdns.org:443",
     "cdn.cmo.de:443",
-    "saas.sin.fan:443",
     "cf.777791.xyz:443"，
 ]
 
