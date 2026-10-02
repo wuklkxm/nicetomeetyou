@@ -453,10 +453,6 @@ def build_chains_text(data):
         for i, n in enumerate(dc_nodes, 1):
             lines.append(f"{zh}-机房-{i:02d}$sstp://vpn:vpn@{n['host']}:{n['port']}")
     return "\n".join(lines) + "\n"
-
-
-# edgetunnel 入口地址池: 客户端直连 Cloudflare 的优选 IP:端口 (循环分配给每个国家节点当入口)
-# 可通过环境变量 EDGE_HOSTS 覆盖 (逗号分隔)
 # edgetunnel 入口地址：客户真实走 Cloudflare 的优选 IP:端口（请分别给每个国家节点当入口）
 EDGE_HOSTS = [
     "www.udacity.com:443",
@@ -468,7 +464,9 @@ EDGE_HOSTS = [
     "cf.777791.xyz:443"
 ]
 
-HOSTS_URL = os.environ.get("HOSTS_URL", "https://jerylihub.github.io/gate/hosts.txt")
+
+
+  HOSTS_URL = os.environ.get("HOSTS_URL", "https://jerylihub.github.io/gate/hosts.txt")
 
 
 def build_hosts_text(data):
