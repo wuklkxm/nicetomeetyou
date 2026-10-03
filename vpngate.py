@@ -465,9 +465,7 @@ EDGE_HOSTS = [
     "cf.777791.xyz:443",
 ]
 
-
-
-  HOSTS_URL = os.environ.get("HOSTS_URL", "https://jerylihub.github.io/gate/hosts.txt")
+HOSTS_URL = os.environ.get("HOSTS_URL", "https://jerylihub.github.io/gate/hosts.txt")
 
 
 def build_hosts_text(data):
